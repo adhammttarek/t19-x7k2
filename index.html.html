@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 19th, Toktok</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#e9f5ed;--card:#fff;--ink:#12283d;--soft:#5f7a72;--line:#c5ddd0;--acc:#1c7a4c;--her:#3fae78;--us:#2f4b7c;--joke:#e9a63f;--me:#e5705a;--serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1f19;--card:#11302a;--ink:#eaf5ee;--soft:#93b5a8;--line:#22493d;--acc:#6fd3a0}}
+:root[data-theme="dark"]{--bg:#0a1f19;--card:#11302a;--ink:#eaf5ee;--soft:#93b5a8;--line:#22493d;--acc:#6fd3a0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;text-align:center;min-height:100vh}
+.wrap{max-width:540px;margin:0 auto;padding:24px 20px 56px}
+h1{font-family:var(--serif);font-weight:500;font-size:2.6rem;margin:.3em 0;letter-spacing:.01em}
+.sub{color:var(--soft);line-height:1.7}
+.bunting{width:100%;display:block;margin-bottom:4px}
+.n19{font-family:var(--serif);font-size:8.5rem;line-height:1;color:var(--acc);font-weight:400;margin-top:10px}
+.eyebrow{margin-top:8vh;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.big{border:1px solid var(--ink);padding:13px 34px;margin-top:22px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;transition:.25s}
+.big:hover{background:var(--ink);color:var(--bg)}
+.big.sm{padding:9px 22px;font-size:.7rem;margin-top:6px}
+#board{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;margin:10px 0 26px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 12px;padding-bottom:16px}
+.b{aspect-ratio:.86;background:color-mix(in srgb,var(--c) 20%,var(--card));border:1px solid var(--c);border-radius:50% 50% 50% 50%/58% 58% 42% 42%;font-family:var(--serif);font-size:1.6rem;position:relative;transition:.25s;margin-bottom:14px}
+.b:after{content:"";position:absolute;left:50%;top:100%;width:1px;height:14px;background:var(--c)}
+.b:hover{transform:translateY(-5px)}
+.b.done{opacity:.45}
+.her{--c:var(--her)}.us{--c:var(--us)}.joke{--c:var(--joke)}.me{--c:var(--me)}
+#modal{position:fixed;inset:0;background:rgba(8,16,30,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:5}
+.card{background:var(--card);padding:34px 26px;max-width:420px;width:100%;max-height:85vh;overflow:auto;animation:fd .4s}
+@keyframes fd{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.tag{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);border-left:3px solid var(--c);padding-left:9px}
+.card h2{font-variant-numeric:lining-nums;font-family:var(--serif);font-weight:500;font-size:2rem;margin:.6em 0 .3em}
+.card p{white-space:pre-line;line-height:1.75}
+.ph{border:1px dashed var(--acc);padding:12px;color:var(--soft);font-size:.85rem}
+.shake{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--acc);animation:sh .5s infinite}
+@keyframes sh{0%,100%{transform:translate(0)}25%{transform:translate(-3px,1px)}75%{transform:translate(3px,-1px)}}
+.dict{text-align:left;border-left:2px solid var(--line);padding:4px 14px;line-height:1.7;font-family:var(--serif);font-size:1.15rem}
+.conf{position:fixed;top:-20px;width:7px;height:11px;pointer-events:none;animation:fall linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <svg class="bunting" viewBox="0 0 400 46" aria-hidden="true"><path d="M0 4Q200 24 400 4" fill="none" stroke="var(--acc)" stroke-width="1"/><polygon points="35,8.4 65,8.4 50,36.4" fill="var(--her)"/><polygon points="85,11.5 115,11.5 100,39.5" fill="var(--us)"/><polygon points="135,13.4 165,13.4 150,41.4" fill="var(--joke)"/><polygon points="185,14.0 215,14.0 200,42.0" fill="var(--me)"/><polygon points="235,13.4 265,13.4 250,41.4" fill="var(--her)"/><polygon points="285,11.5 315,11.5 300,39.5" fill="var(--us)"/><polygon points="335,8.4 365,8.4 350,36.4" fill="var(--joke)"/></svg>
+  <div id="gate" style="display:none">
+    <div class="eyebrow">Locked until midnight</div>
+    <h1>Not yet, Toktok</h1>
+    <p class="sub">Your birthday opens at midnight.<br>Come back then. Trust me.</p>
+    <h1 id="cd" style="font-variant-numeric:tabular-nums;color:var(--pink)">--</h1>
+  </div>
+  <div id="intro" style="display:none">
+    <div class="eyebrow">Happy Birthday</div>
+    <div class="n19">19</div>
+    <h1>Toktok</h1>
+    <p class="sub">01.10.2026 · 19 today<br>Far away on the map, not at all far away here.</p>
+    <button class="big" onclick="openBoard()">Open</button>
+  </div>
+  <div id="board">
+    <h1>Happy 19th, Toktok</h1>
+    <p class="sub">Open them in any order. <b id="cnt">0</b>/19 opened</p>
+    
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+<div id="modal" onclick="if(event.target===this)closeM()"><div class="card" id="card"></div></div>
+<script>
+// ✏️ عدّل المحتوى هنا. type: her | us | joke | me
+var I=[
+{"n": 1, "tag": "", "h": "Eid melad Toktok", "b": "01 / 10 / 2007\n\nEl youm ely gably habibty w hayaty. 🤍"},
+{"n": 2, "tag": "", "h": "Tary2t dehktk", "b": "Ba3sha2 dehktk b kol ashkalha.\n\nSawa2 dehkt el ksoof w 3eink lama tet2fl keda, aw lama n3ml taste test w nensa ehna bn3ml eh aslan w nfdal nedhak w nekhabat keda fl 3arabya.\n\nYarab afdal ashoof el dehka di 3aleiky ya habibty. 🤍"},
+{"n": 3, "tag": "", "h": "Hagat ba3sh2ha feeky", "b": "el energy bta3tk ely shayefha men a7la 7agat feeky, mashallah allahumbarek.\n\nlama t3mly nails gedyda w testany keda ana khat baly wala la w tab3an bet3gbny w ba2ool TOHFAAA, w te2oly “merciii” m3 dehkt ksoof keda.\n\nreactions beta3tek w ehna bnetkalem f ay haga, ana momkn afdal atfarag 3aleky w mazha2sh abadan."},
+{"n": 4, "tag": "", "h": "Sotek", "b": "Ana baheb sotek awy.\n\nEnty shayfa 3aks keda, msh 3aref ezay ely howa “shofoony w ana motwad3a”\n\nbas ana bgad bamoot fyh, law sem3t f ay wa2t ha3rf eno enty 3altool yarohy.\n\nw tab3an el sot el sefy da bom bas lama afham enty bet2oly eh el awel."},
+{"n": 5, "tag": "", "h": "05 / 03", "b": "Ahla w aham youm f hayaty 3ashan 3arfny 3ala my toktok ely hya rohy w ely nefsy akml hayaty ma3aha yarab"},
+{"n": 6, "tag": "", "h": "Dates mesh hansaha bsbbk enty", "b": "Date el ice cream:\n\nha7ky 3no mn hena le 3omry kolo.\nKont mertah yomha w ka2ny 3arfk men senyn. Msh ader awsef kont mabsoot ad eh wana a3ed bases 3ala 3eink el amar dy mashallah.\n\nDate el movie night:\n\nyoum ma etfargna 3ala film “the notebook” awel mara f koko w kanet fekrtk. el youm da khalany a7bek aktar ma ana bahebk b ktyr baa.\n\nDate youm eid meladk:\n\nhowa ah kan abl eid meladk yarohy w da 3ashan lel asaf 3ashan msh hab2a mawgood bas da maymn3sh eny lazm a7tefl b my toktok habibty w hya btkbar keda. el youm da ana kont mabsoot awy 3ashan shayfk mabsoota ya hayaty."},
+{"n": 7, "tag": "", "h": "Dayman bt5aly ay haga lya t3m", "b": "Taste tests:\n\nda bnsbaly maktoob b esmk mn kotr ma howa msh taste test 3ady la da by2lb video 10 min fyh 3ashwa2yat el denya kolha w afdal atfrag 3aleh mazha2sh.\n\nrabena ma y7rmny mn youm gdyd w taste test gdyd m3aky ya alby 🤍\n\nCar rides:\n\nsawa2 bnghanny aw bnetkalem. Momken nroo7 Alexandria w ana mesh wakhed balak mn kotr mana msh 3ayz el fakra dy tekhlas\n\nnefsy troohy alexandria le awel mara w ana ab2a ma3ky.\n\nHaflet Amr Diab:\n\nkant awel mara lyna ehna el etnein w kont mabsoot en enty ma3aya aktar ma kont mabsoot bel 7afla nafsaha."},
+{"n": 8, "tag": "", "h": "Hagat baheb kol shewaya a2olk 3aleha", "b": "Enk mashallah 3ala tab3tyk awy w khaltyny arta7 ma3ky fl kalam b sohoola keda.\n\nenk betsta7mly hagat ktyr fyha daght w fl akher bt3rafy t3adyha lewahdek sawa2 fl derasa aw shoghl aw fo2 kol da betsa3dy fl beit gamed awy bgad.\n\nBgad ana mabsoot mnk awy w rabena ykhalyky lyna yarab 🤍"},
+{"n": 9, "tag": "", "h": "EL DAMGO", "b": "ay haga damg bettla3 mnk ana ba3sh2ha w ay inside joke mabena betmawtny lama enty t2olyha b tary2tk ely hya special awy w bgad mafysh zyk.\n\nya hazy ya alboo"},
+{"n": 10, "tag": "", "h": "October", "b": "y3ny Aham shahr fel sana kolha\ny3ny shahr weladet toty\n\nw belmonasba adeeky 10/10\nla ana asfo adeeky ∞/10\n\nbas keda"},
+{"n": 11, "tag": "", "h": "Tary2t ehtmamk", "b": "Msh hansa lama ketfy etkhal3 w enty tany youm el sobh shoftony kowys wala la w 3aml eh.\n\nW lama kont rag3 mn el sahel w kont meday2 mn el beit w oltyly “5alas, eh ra2yek teegy call?”, kanet awel mara t2oly keda w kont mabsoot awy.\n\nW youm match Argentina w Masr, lama kont metday2 mn el beit bardo w nzlt, w fdlt bara fel 3arabeya, w fedlna netkalem sawa l7ad abl el match.\n\nKanet 7aga cute awy mnk ya hayaty. 🤍"},
+{"n": 12, "tag": "", "h": "12 / 06", "b": "ma2drtsh astana aktar mn keda w a2olk eny f3ln bahebk mn alby w 3ayez akml hayaty ma3ky ya habibty 🤍"},
+{"n": 13, "tag": "", "h": "Hagat et3lmtha mnk", "b": "mn aktar el hagat ely et7asent 3andy bsbbk w hya el reactions bet3ty, ah lesa talga shewaya bas enty 3arfa el aura w kedza.\n\net3lmt eny bgad kol lahza asawarha aw aktebha. mashallah 3aleiky, enty bet3arfy document kowys awy.\n\nyarab yb2a fy memories ktyr helwa awy sawa ma3ky."},
+{"n": 14, "tag": "", "h": "SHATRA W BOM KAMAN", "b": "Crochet:\n\nenty mashallah allahumbarek 3aleiky shatra awy fyh w bet3mly hagat ktyr awy w baheb awy el passion bet3k fyh.\n\nCooking:\n\nkol el hagat dy baa w sa3at bet3mly akl lel beit w youmha en el beit haykol ahla akl fl denya mn ahla eed fl denya, bgad teslam eedk.\n\nyarab ew3dna bl steeeek baa"},
+{"n": 15, "tag": "", "h": "Ahlek", "b": "Mn sa3et ma 3rftk w ana 3arf en ahlek hayeb2o men ahla w atyab el nas momken fl denya 3ashan shayf odamy benthom aho.\n\nkhsosan baa djinane aw ana ha2ol mama 3ashan bgad ana ba3tbrha zy mama bzbt w bahebha awy.\n\nMn awel ma 3erftha, hata abl ma ashofha, w ana bgad habetaha awy.\n\nrabena ykhalyko lya. 🤍"},
+{"n": 16, "tag": "", "h": "🇩🇿", "b": "mn el hagat el bahebha feeky en enty nosek gaza2ry w f3ln bet7byha w bettkalmy gaza2ry kaman w ely howa el gaz2r feeky keda.\n\nyarab nrooh balady el tanya sawa ya habibty."},
+{"n": 17, "tag": "", "h": "😜"},
+{"n": 18, "tag": "", "h": "Haga bahebha feeky awy", "b": "enk montazema 3ala suret el kahf kol gom3a\nw kaman lama bnb2a khargyn w nrooh nesaly sawa keda w t2oly maslan matnsash tesaly el suna kaman\n\nw tab3an el hijab el 3asl beta3k w khsoosan lama yb2a hijab saleh bgad ahla haga 3einy momkn tshofha yarohy\n\nrabena ysabetk yarab. 🤍"},
+{"n": 19, "tag": "", "h": "Enty", "b": "bahebk awy ya toktok, my baby toktok.\n\nMsh haga feeky. Msh zekra mo3ayana. Mesh moment.\n\nEnty kolek.\n\nW yarab afdal a7tefl b eid medek da l7ad akher youm fe 3omry, w enty habibty w mabsoota dayman.\n\nHappy 19th birthday, Toktok. 🤍", "last": 1}
+];
+I.forEach(function(x){x.t=["her","us","joke","me"][(x.n-1)%4]});
+// 🖼️ حط الصور هنا: img:"data:image/jpeg;base64,..." جوه أي كارت | 🎵 الأغنية: AUDIO="data:audio/mpeg;base64,..."
+var AUDIO="";
+var C={her:"var(--her)",us:"var(--us)",joke:"var(--joke)",me:"var(--me)"},done={};
+var g=document.getElementById("grid");
+I.forEach(function(x){var e=document.createElement("button");e.className="b "+x.t;e.id="b"+x.n;e.textContent=x.n;e.onclick=function(){show(x)};g.appendChild(e)});
+var T=new Date("2026-10-01T00:00:00+03:00");
+function tick(){var d=T-new Date();
+ if(d<=0||location.hash=="#preview"){document.getElementById("gate").style.display="none";document.getElementById("intro").style.display="block";clearInterval(iv);return}
+ document.getElementById("gate").style.display="block";
+ var h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),c=Math.floor(d%6e4/1e3);
+ document.getElementById("cd").textContent=h+"h "+m+"m "+c+"s"}
+var iv=setInterval(tick,1000);tick();
+function openBoard(){document.getElementById("intro").style.display="none";document.getElementById("board").style.display="block";confetti(25)}
+function show(x){
+ var h='<span class="tag" style="--c:'+C[x.t]+'">'+('0'+x.n).slice(-2)+'</span>';
+ if(x.dict){h+='<h2>yabnty harzmnk</h2><div class="dict"><i>verb</i><br>Something I say when I find your hair out of place or something.<br>You still make me laugh every time.</div><p><button class="big sm" onclick="this.outerHTML=\'<b>→ I love you, idiot.</b>\'">translation</button></p>'}
+ else{
+  h+=x.shake?'<p class="shake">OH HELL NAHHHH</p>':'<h2>'+x.h+'</h2>';
+  if(x.img)h+='<img src="'+x.img+'" style="width:100%;border-radius:16px" alt="">';
+  if(x.b)h+='<p>'+x.b+'</p>';
+  if(x.ph)h+='<p class="ph">'+x.ph+'</p>';
+  if(x.btn)h+='<p id="rv"><button class="big sm" onclick="document.getElementById(\'rv\').innerHTML=\''+x.res+'\'">'+x.btn+'</button></p>';
+ }
+ h+='<p><button class="big sm" onclick="closeM()">close</button></p>';
+ document.getElementById("card").innerHTML=h;
+ document.getElementById("modal").style.display="flex";
+ if(x.n==5&&AUDIO){if(!window.au){window.au=new Audio(AUDIO);window.au.loop=true}try{window.au.play()}catch(e){}}
+ done[x.n]=1;document.getElementById("b"+x.n).classList.add("done");
+ document.getElementById("cnt").textContent=Object.keys(done).length;
+ if([1,5,12,19].indexOf(x.n)>-1)confetti(x.last?70:30);
+}
+function closeM(){if(window.au)window.au.pause();document.getElementById("modal").style.display="none"}
+function confetti(n){var em=["#1c7a4c","#3fae78","#2f4b7c","#e9a63f","#e5705a","#cfe5d9"];for(var i=0;i<n;i++){var s=document.createElement("span");s.className="conf";s.style.background=em[i%6];s.style.left=Math.random()*100+"vw";s.style.animationDuration=(2+Math.random()*3)+"s";document.body.appendChild(s);setTimeout(function(e){e.remove()},5500,s)}}
+</script>
+</body>
+</html>
